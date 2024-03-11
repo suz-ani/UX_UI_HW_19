@@ -1,0 +1,221 @@
+@font-face {
+  font-family: Inter;
+  src: url(/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+  font-family: BeVietnamPro-SemiBold;
+  src: url(/fonts/BeVietnamPro-SemiBold.ttf);
+}
+
+/*header and navigation bar styling*/
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+div.logo {
+  width: 23%;
+  padding: 1%;
+  text-align: start;
+}
+
+nav.inline-block {
+  width: 72%;
+  padding: 1%;
+}
+
+ul.navigation-tabs {
+  width: 30%;
+  margin-left: auto;
+  text-align: right;
+  font-family: Inter;
+  font-size: 24px;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+a:link {
+  text-decoration: none;
+  color: #48626e;
+}
+a:visited {
+  color: #48626e;
+}
+
+/*hero section styling*/
+section.heroImg {
+  height: 600px;
+  padding: 25px 120px 25px 120px;
+  display: flex;
+  align-items: center;
+}
+
+div.content {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*div to hold button -- parent*/
+.button_su {
+  overflow: hidden;
+  position: relative; /* parental position set for all children position to be set relative to*/
+  display: inline-block;
+  border-radius: 35px;
+}
+
+/*parent for 'offset' coordinates & animation*/
+.su_button_circle {
+  border-radius: 500px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  pointer-events: none;
+}
+
+/*button styling*/
+.button_su_inner {
+  display: inline-block;
+  padding: 10px;
+  background: #f6ae55;
+
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 300;
+  width: 132px;
+  text-align: center;
+  border-radius: 35px;
+
+  transition: 400ms;
+  text-decoration: none;
+  z-index: 0; /*higher z-index items appears stacked more in front of items with lower z-index*/
+}
+
+.button_text_container {
+  position: relative;
+}
+
+.explode-circle {
+  animation: explode 0.75s forwards;
+}
+
+@keyframes explode {
+  0% {
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: rgba(42, 53, 80, 0.2);
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    background-color: rgba(225, 225, 225, 0.8);
+  }
+}
+
+.desplode-circle {
+  animation: desplode 0.75s forwards;
+}
+
+@keyframes desplode {
+  0% {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+    background-color: rgba(225, 225, 225, 0.8);
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: rgba(129, 80, 108, 0.6);
+  }
+}
+
+/*skills section styling*/
+
+h1 {
+  text-align: center;
+}
+
+#skills {
+  text-align: center;
+}
+
+.mySkills {
+  padding: 60px 120px 60px 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.flexSkills {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*projects section styling*/
+
+.workGrid {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 385px 385px;
+  grid-template-columns: 590px 590px;
+  grid-template-areas:
+    "photo1 desc1"
+    "photo2 desc2";
+  column-gap: 20px;
+  row-gap: 60px;
+}
+
+.projectPhoto1 {
+  grid-area: photo1;
+}
+
+.projectDesc1 {
+  grid-area: desc1;
+}
+
+.projectPhoto2 {
+  grid-area: photo2;
+}
+
+.projectDesc2 {
+  grid-area: desc2;
+}
+
+/*footer*/
+footer {
+  background-color: rgb(227, 227, 227);
+}
+
+ul.footer-tabs {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media only screen and (max-width: 600) {
+}
